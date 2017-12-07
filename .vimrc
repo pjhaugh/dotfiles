@@ -28,6 +28,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'w0rp/ale'
 Plugin 'jewes/Conque-Shell'
 Plugin 'morhetz/gruvbox'
+Plugin 'vim-python/python-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -91,4 +92,5 @@ map <leader>f :ALEFix<CR>
 " Play with colors
 
 set background=dark
-:set t_ut=
+set t_ut=
+set t_Co=256
