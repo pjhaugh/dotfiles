@@ -29,6 +29,7 @@ Plugin 'w0rp/ale'
 Plugin 'jewes/Conque-Shell'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-python/python-syntax'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
