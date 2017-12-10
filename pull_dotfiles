@@ -5,3 +5,4 @@ cp ~/.bashrc .bashrc
 cp ~/.bash_profile .bash_profile
 cp ~/.dircolors .dircolors
 cp ~/.gitconfig .gitconfig
+cp ~/.ghci .ghci
