@@ -3,3 +3,5 @@
 	name = Patrick Haugh
 [push]
 	default = simple
+[core]
+	editor = vim
