@@ -30,6 +30,9 @@ Plugin 'jewes/Conque-Shell'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-python/python-syntax'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'ujihisa/repl.vim'
+Plugin 'Shougo/vimshell.vim'
+Plugin 'Shougo/vimproc.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -81,7 +84,7 @@ set foldlevel=99
 
 nnoremap <space> za
 
-map <leader>i :ConqueTermSplit python3 -i<CR>
+" map <leader>i :ConqueTermSplit python3 -i<CR>
 
 " Play with ALE settings
 
@@ -95,3 +98,6 @@ map <leader>f :ALEFix<CR>
 set background=dark
 set t_ut=
 set t_Co=256
+
+" Activate spellchecking
+:setlocal spell spelllang=en_us
