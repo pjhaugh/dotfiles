@@ -33,6 +33,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'ujihisa/repl.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
