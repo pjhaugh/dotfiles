@@ -157,3 +157,5 @@ export DISPLAY=localhost:0.0
 unset env
 
 clear && neofetch
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
