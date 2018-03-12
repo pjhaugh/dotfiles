@@ -1,8 +1,9 @@
 set nocompatible              " required
 filetype off                  " required
-
+ 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.fzf
 call vundle#begin()
 
 " alternatively, pass a path where Vundle should install plugins
@@ -34,6 +35,8 @@ Plugin 'ujihisa/repl.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'zhou13/vim-easyescape'
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,7 +49,7 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
+    \ set textwidth=109 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
@@ -93,6 +96,8 @@ let g:ale_warn_about_trailing_blank_lines = 0
 let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_column_always = 1
 
+let g:ale_python_flake8_options = '--max-line-length=109'
+
 map <leader>f :ALEFix<CR>
 " Play with colors
 
@@ -102,3 +107,14 @@ set t_Co=256
 
 " Activate spellchecking
 :setlocal spell spelllang=en_us
+
+"copy (write) highlighted text to .vimbuffer
+vnoremap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" paste from buffer
+noremap <C-v> :r ~/.vimbuffer<CR>
+
+
+let g:easyescape_chars = { "j": 1, "k": 1 }
+let g:easyescape_timeout = 100
+cnoremap jk <ESC>
+cnoremap kj <ESC>
