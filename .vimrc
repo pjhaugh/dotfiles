@@ -1,3 +1,4 @@
+let g:python_host_skip_check=1
 set nocompatible              " required
 filetype off                  " required
  
@@ -15,7 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
@@ -26,6 +27,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
 Plugin 'jewes/Conque-Shell'
 Plugin 'morhetz/gruvbox'
@@ -71,9 +73,6 @@ syntax on
 
 set pastetoggle=<leader>p
 
-colorscheme gruvbox
-
-
 set nu
 
 set clipboard=unnamed
@@ -104,6 +103,9 @@ map <leader>f :ALEFix<CR>
 set background=dark
 set t_ut=
 set t_Co=256
+let g:gruvbox_italic=0
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
 
 " Activate spellchecking
 :setlocal spell spelllang=en_us
@@ -118,3 +120,9 @@ let g:easyescape_chars = { "j": 1, "k": 1 }
 let g:easyescape_timeout = 100
 cnoremap jk <ESC>
 cnoremap kj <ESC>
+vnoremap ; :norm I#<cr>
+
+let g:python3_host_prog='/home/pjhaugh/.pyenv/shims/python3'
+
+let g:airline_theme='deus'
+let g:airline_powerline_fonts = 1
