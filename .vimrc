@@ -1,7 +1,7 @@
 let g:python_host_skip_check=1
 set nocompatible              " required
 filetype off                  " required
- 
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
